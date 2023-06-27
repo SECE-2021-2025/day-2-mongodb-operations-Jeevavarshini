@@ -1,0 +1,747 @@
+db.collc1.insertOne({name:"Varshini",age:19});
+{
+  acknowledged: true,
+  insertedId: ObjectId("64916e16479953ebebae2e7f")
+}
+ db.collc1.find()
+{
+  _id: ObjectId("64916e16479953ebebae2e7f"),
+  name: 'Varshini',
+  age: 19
+}
+db.collc1.updateOne({name:"Varshini"},{$set:{age=18}});
+Error: clone(t={}){const r=t.loc||{};return e({loc:new Position("line"in r?r.line:this.loc.line,"column"in r?r.column:...<omitted>...)} could not be cloned.
+db.collc1.updateOne({name:"Varshini"},{$set:{age:18}});
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+db.collc1.updateOne({name:"Varshini"},{$set:{age:18}});
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 0,
+  upsertedCount: 0
+}
+db.collc1.find()
+{
+  _id: ObjectId("64916e16479953ebebae2e7f"),
+  name: 'Varshini',
+  age: 18
+}
+db.collc1.insertOne({name:"Aarthi",age:19});
+{
+  acknowledged: true,
+  insertedId: ObjectId("64916ef5479953ebebae2e80")
+}
+db.collc1.insertOne({name:"Amirtha",age:30});
+{
+  acknowledged: true,
+  insertedId: ObjectId("64916f13479953ebebae2e81")
+}
+db.collc1.find()
+{
+  _id: ObjectId("64916e16479953ebebae2e7f"),
+  name: 'Varshini',
+  age: 18
+}
+{
+  _id: ObjectId("64916ef5479953ebebae2e80"),
+  name: 'Aarthi',
+  age: 19
+}
+{
+  _id: ObjectId("64916f13479953ebebae2e81"),
+  name: 'Amirtha',
+  age: 30
+}
+db.collc1.insertMany({name:"Priya",age:29},);
+MongoInvalidArgumentError: Argument "docs" must be an array of documents
+db.collc1.insertMany({name:"Priya",age:29},{name:"Prakash",age=90",{}});
+Error: clone(t={}){const r=t.loc||{};return e({loc:new Position("line"in r?r.line:this.loc.line,"column"in r?r.column:...<omitted>...)} could not be cloned.
+db.collc1.insertMany({name:"Priya",age:29},{name:"Prakash",age=90",{name:"Saran",age:30}});
+Error: clone(t={}){const r=t.loc||{};return e({loc:new Position("line"in r?r.line:this.loc.line,"column"in r?r.column:...<omitted>...)} could not be cloned.
+db.collc1.insertMany({name:"Priya",age:29},{name:"Prakash",age=90},{name:"Saran",age:30});
+Error: clone(t={}){const r=t.loc||{};return e({loc:new Position("line"in r?r.line:this.loc.line,"column"in r?r.column:...<omitted>...)} could not be cloned.
+db.collc1.insertMany([{name:"Priya",age:29},{name:"Prakash",age=90},{name:"Saran",age:30}]);
+Error: clone(t={}){const r=t.loc||{};return e({loc:new Position("line"in r?r.line:this.loc.line,"column"in r?r.column:...<omitted>...)} could not be cloned.
+db.collc1.insertMany([{name:"Tom",age:29},{name:"Ram",age=90},{name:"Sam",age:30}]);
+Error: clone(t={}){const r=t.loc||{};return e({loc:new Position("line"in r?r.line:this.loc.line,"column"in r?r.column:...<omitted>...)} could not be cloned.
+db.collc1.insertMany([{name:"Tom",age:29},{name:"Ram",age:90},{name:"Sam",age:30}]);
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId("64917042479953ebebae2e82"),
+    '1': ObjectId("64917042479953ebebae2e83"),
+    '2': ObjectId("64917042479953ebebae2e84")
+  }
+}
+db.collc1.find()
+{
+  _id: ObjectId("64916e16479953ebebae2e7f"),
+  name: 'Varshini',
+  age: 18
+}
+{
+  _id: ObjectId("64916ef5479953ebebae2e80"),
+  name: 'Aarthi',
+  age: 19
+}
+{
+  _id: ObjectId("64916f13479953ebebae2e81"),
+  name: 'Amirtha',
+  age: 30
+}
+{
+  _id: ObjectId("64917042479953ebebae2e82"),
+  name: 'Tom',
+  age: 29
+}
+{
+  _id: ObjectId("64917042479953ebebae2e83"),
+  name: 'Ram',
+  age: 90
+}
+{
+  _id: ObjectId("64917042479953ebebae2e84"),
+  name: 'Sam',
+  age: 30
+}
+db.collc1.updateOne({name:"Sam"},{$set:{age:18}});
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+db.collc1.find()
+{
+  _id: ObjectId("64916e16479953ebebae2e7f"),
+  name: 'Varshini',
+  age: 18
+}
+{
+  _id: ObjectId("64916ef5479953ebebae2e80"),
+  name: 'Aarthi',
+  age: 19
+}
+{
+  _id: ObjectId("64916f13479953ebebae2e81"),
+  name: 'Amirtha',
+  age: 30
+}
+{
+  _id: ObjectId("64917042479953ebebae2e82"),
+  name: 'Tom',
+  age: 29
+}
+{
+  _id: ObjectId("64917042479953ebebae2e83"),
+  name: 'Ram',
+  age: 90
+}
+{
+  _id: ObjectId("64917042479953ebebae2e84"),
+  name: 'Sam',
+  age: 18
+}
+db.collc1.find({name="Ram"});
+Error: clone(t={}){const r=t.loc||{};return e({loc:new Position("line"in r?r.line:this.loc.line,"column"in r?r.column:...<omitted>...)} could not be cloned.
+db.collc1.find({name:"Ram"});
+{
+  _id: ObjectId("64917042479953ebebae2e83"),
+  name: 'Ram',
+  age: 90
+}
+db.collc1.find({age:18});
+{
+  _id: ObjectId("64916e16479953ebebae2e7f"),
+  name: 'Varshini',
+  age: 18
+}
+{
+  _id: ObjectId("64917042479953ebebae2e84"),
+  name: 'Sam',
+  age: 18
+}
+db.collc1.find({age:191);
+Error: clone(t={}){const r=t.loc||{};return e({loc:new Position("line"in r?r.line:this.loc.line,"column"in r?r.column:...<omitted>...)} could not be cloned.
+db.collc1.find({age:13);
+Error: clone(t={}){const r=t.loc||{};return e({loc:new Position("line"in r?r.line:this.loc.line,"column"in r?r.column:...<omitted>...)} could not be cloned.
+db.collc1.find({name:"Ra"});
+collc1
+Selection deleted
+use collc1
+
+
+
+
+use clc;
+switched to db clc
+db.clc.insertOne({Name:"Swift",Model:"DTS",Rented_user_count:1,Mileage:18,Transmission:"Automatic",Rent:1200,Fuel:"Petrol",Image_url:"http://adsjkvji.com"});
+{
+  acknowledged: true,
+  insertedId: ObjectId("6491796f479953ebebae2e85")
+}
+db.clc.insertOne([{Name:"Swift",Model:"DTS",Rented_user_count:1,Mileage:18,Transmission:"Automatic",Rent:1200,Fuel:"Petrol",Image_url:"http://adsjkvji.com"},{Name:"Maruti",Model:"MN",Rented_user_count:1,Mileage:80,Transmission:"Automatic",Rent:120,Fuel:"Petrol",Image_url:"http://gbhghc.com"},{Name:"Ford",Model:"QS",Rented_user_count:7,Mileage:18,Transmission:"Manual",Rent:1200,Fuel:"Petrol",Image_url:"http://afjeijvji.com"},{Name:"BMW",Model:"2023",Rented_user_count:0,Mileage:90,Transmission:"Automatic",Rent:100,Fuel:"Diesel",Image_url:"http://ei9ruij.com"},{Name:"Audi",Model:"MS",Rented_user_count:3,Mileage:5,Transmission:"Manual",Rent:2060,Fuel:"Petrol",Image_url:"http://gvuyyjd.com"},{Name:"Ferari",Model:"TS",Rented_user_count:8,Mileage:28,Transmission:"Automatic",Rent:1000,Fuel:"Diesel",Image_url:"http://vgddfhvhui.com"},{Name:"Audi",Model:"IBM",Rented_user_count:9,Mileage:20,Transmission:"Manual",Rent:2100,Fuel:"Petrol",Image_url:"http://agfhtygfd.com"}]);
+{
+  acknowledged: true,
+  insertedId: ObjectId("64917c2c479953ebebae2e86")
+}
+db.clc.find();
+{
+  _id: ObjectId("6491796f479953ebebae2e85"),
+  Name: 'Swift',
+  Model: 'DTS',
+  Rented_user_count: 1,
+  Mileage: 18,
+  Transmission: 'Automatic',
+  Rent: 1200,
+  Fuel: 'Petrol',
+  Image_url: 'http://adsjkvji.com'
+}
+{
+    Rented_user_count: 7,
+    Mileage: 18,
+    Transmission: 'Manual',
+    Rent: 1200,
+    Fuel: 'Petrol',
+    Image_url: 'http://afjeijvji.com'
+  },
+  '3': {
+    Name: 'BMW',
+    Model: '2023',
+    Rented_user_count: 0,
+    Mileage: 90,
+    Transmission: 'Automatic',
+    Rent: 100,
+    Fuel: 'Diesel',
+    Image_url: 'http://ei9ruij.com'
+  },
+  '4': {
+    Name: 'Audi',
+    Model: 'MS',
+    Rented_user_count: 3,
+    Mileage: 5,
+    Transmission: 'Manual',
+    Rent: 2060,
+    Fuel: 'Petrol',
+    Image_url: 'http://gvuyyjd.com'
+  },
+  '5': {
+    Name: 'Ferari',
+    Model: 'TS',
+    Rented_user_count: 8,
+    Mileage: 28,
+    Transmission: 'Automatic',
+    Rent: 1000,
+    Fuel: 'Diesel',
+    Image_url: 'http://vgddfhvhui.com'
+  },
+  '6': {
+    Name: 'Audi',
+    Model: 'IBM',
+    Rented_user_count: 9,
+    Mileage: 20,
+    Transmission: 'Manual',
+    Rent: 2100,
+    Fuel: 'Petrol',
+    Image_url: 'http://agfhtygfd.com'
+  },
+  _id: ObjectId("64917c2c479953ebebae2e86")
+}
+db.clc.insertOne({Name:"Rolls Royce",Model:"v12",Rented_user_count:13,Mileage:18,Transmission:"Manual",Rent:200,Fuel:"Diesel",Image_url:"http://rerggrsd.com"});
+{
+  acknowledged: true,
+  insertedId: ObjectId("64917e5a479953ebebae2e87")
+}
+db.clc.insertOne({Name:"Alto",Model:"vv",Rented_user_count:6,Mileage:20,Transmission:"Manual",Rent:2000,Fuel:"Petrol",Image_url:"http://dfygeui.com"});
+{
+  acknowledged: true,
+  insertedId: ObjectId("64917e8c479953ebebae2e88")
+}
+db.clc.insertOne({Name:"Sandro",Model:"tm",Rented_user_count:0,Mileage:88,Transmission:"Automatic",Rent:2070,Fuel:"Gas",Image_url:"http://jfhhud.com"});
+{
+  acknowledged: true,
+  insertedId: ObjectId("64917edd479953ebebae2e89")
+}
+db.clc.find();
+{
+  _id: ObjectId("6491796f479953ebebae2e85"),
+  Name: 'Swift',
+  Model: 'DTS',
+  Rented_user_count: 1,
+  Mileage: 18,
+  Transmission: 'Automatic',
+  Rent: 1200,
+  Fuel: 'Petrol',
+  Image_url: 'http://adsjkvji.com'
+}
+{
+  '1': {
+    Name: 'Maruti',
+    Model: 'MN',
+    Rented_user_count: 1,
+    Mileage: 80,
+    Transmission: 'Automatic',
+    Rent: 120,
+    Fuel: 'Petrol',
+    Image_url: 'http://gbhghc.com'
+  },
+  '2': {
+    Name: 'Ford',
+    Model: 'QS',
+    Rented_user_count: 7,
+    Mileage: 18,
+    Transmission: 'Manual',
+    Rent: 1200,
+    Fuel: 'Petrol',
+    Image_url: 'http://afjeijvji.com'
+  },
+  '3': {
+    Name: 'BMW',
+    Model: '2023',
+    Rented_user_count: 0,
+    Mileage: 90,
+    Transmission: 'Automatic',
+    Rent: 100,
+    Fuel: 'Diesel',
+    Image_url: 'http://ei9ruij.com'
+  },
+  '4': {
+    Name: 'Audi',
+    Model: 'MS',
+    Rented_user_count: 3,
+    Mileage: 5,
+    Transmission: 'Manual',
+    Rent: 2060,
+    Fuel: 'Petrol',
+    Image_url: 'http://gvuyyjd.com'
+  },
+  '5': {
+    Name: 'Ferari',
+    Model: 'TS',
+    Rented_user_count: 8,
+    Mileage: 28,
+    Transmission: 'Automatic',
+    Rent: 1000,
+    Fuel: 'Diesel',
+    Image_url: 'http://vgddfhvhui.com'
+  },
+  '6': {
+    Name: 'Audi',
+    Model: 'IBM',
+    Rented_user_count: 9,
+    Mileage: 20,
+    Transmission: 'Manual',
+    Rent: 2100,
+    Fuel: 'Petrol',
+    Image_url: 'http://agfhtygfd.com'
+  },
+  _id: ObjectId("64917c2c479953ebebae2e86")
+}
+{
+  _id: ObjectId("64917e5a479953ebebae2e87"),
+  Name: 'Rolls Royce',
+  Model: 'v12',
+  Rented_user_count: 13,
+  Mileage: 18,
+  Transmission: 'Manual',
+  Rent: 200,
+  Fuel: 'Diesel',
+  Image_url: 'http://rerggrsd.com'
+}
+{
+  _id: ObjectId("64917e8c479953ebebae2e88"),
+  Name: 'Alto',
+  Model: 'vv',
+  Rented_user_count: 6,
+  Mileage: 20,
+  Transmission: 'Manual',
+  Rent: 2000,
+  Fuel: 'Petrol',
+  Image_url: 'http://dfygeui.com'
+}
+
+
+use new
+switched to db new
+db.cl.insertOne({name:"Karthik",age:18,gender:"M"});
+{
+  acknowledged: true,
+  insertedId: ObjectId("6492718dd6a9945d39427394")
+}
+db.cl.insertOne({name:"Srithika",age:21,gender:"F"});
+{
+  acknowledged: true,
+  insertedId: ObjectId("649271afd6a9945d39427395")
+}
+db.cl.insertOne({name:"Haritha",age:19,gender:"F"});
+{
+  acknowledged: true,
+  insertedId: ObjectId("64927250d6a9945d39427396")
+}
+db.cl.insertOne({name:"Bharath",age:27,gender:"M"});
+{
+  acknowledged: true,
+  insertedId: ObjectId("6492726ed6a9945d39427397")
+}
+db.cl.insertOne({name:"Aarish",age:15,gender:"M"});
+{
+  acknowledged: true,
+  insertedId: ObjectId("64927282d6a9945d39427398")
+}
+db.cl.insertOne({name:"Dev",age:19,gender:"M"});
+{
+  acknowledged: true,
+  insertedId: ObjectId("649272b0d6a9945d39427399")
+}
+db.cl.insertOne({name:"Aishwarya",age:16,gender:"F"});
+{
+  acknowledged: true,
+  insertedId: ObjectId("649272cad6a9945d3942739a")
+}
+db.cl.find();
+{
+  _id: ObjectId("6492718dd6a9945d39427394"),
+  name: 'Karthik',
+  age: 18,
+  gender: 'M'
+}
+{
+  _id: ObjectId("649271afd6a9945d39427395"),
+  name: 'Srithika',
+  age: 21,
+  gender: 'F'
+}
+{
+  _id: ObjectId("64927250d6a9945d39427396"),
+  name: 'Haritha',
+  age: 19,
+  gender: 'F'
+}
+{
+  _id: ObjectId("6492726ed6a9945d39427397"),
+  name: 'Bharath',
+  age: 27,
+  gender: 'M'
+}
+{
+  _id: ObjectId("64927282d6a9945d39427398"),
+  name: 'Aarish',
+  age: 15,
+  gender: 'M'
+}
+{
+  _id: ObjectId("649272b0d6a9945d39427399"),
+  name: 'Dev',
+  age: 19,
+  gender: 'M'
+}
+{
+  _id: ObjectId("649272cad6a9945d3942739a"),
+  name: 'Aishwarya',
+  age: 16,
+  gender: 'F'
+}
+db.cl.find({age:{$gt:30}});
+db.cl.find();
+{
+  _id: ObjectId("6492718dd6a9945d39427394"),
+  name: 'Karthik',
+  age: 18,
+  gender: 'M'
+}
+{
+  _id: ObjectId("649271afd6a9945d39427395"),
+  name: 'Srithika',
+  age: 21,
+  gender: 'F'
+}
+{
+  _id: ObjectId("64927250d6a9945d39427396"),
+  name: 'Haritha',
+  age: 19,
+  gender: 'F'
+}
+{
+  _id: ObjectId("6492726ed6a9945d39427397"),
+  name: 'Bharath',
+  age: 27,
+  gender: 'M'
+}
+{
+  _id: ObjectId("64927282d6a9945d39427398"),
+  name: 'Aarish',
+  age: 15,
+  gender: 'M'
+}
+{
+  _id: ObjectId("649272b0d6a9945d39427399"),
+  name: 'Dev',
+  age: 19,
+  gender: 'M'
+}
+{
+  _id: ObjectId("649272cad6a9945d3942739a"),
+  name: 'Aishwarya',
+  age: 16,
+  gender: 'F'
+}
+db.cl.find({age:{$gt:15}});
+{
+  _id: ObjectId("6492718dd6a9945d39427394"),
+  name: 'Karthik',
+  age: 18,
+  gender: 'M'
+}
+{
+  _id: ObjectId("649271afd6a9945d39427395"),
+  name: 'Srithika',
+  age: 21,
+  gender: 'F'
+}
+{
+  _id: ObjectId("64927250d6a9945d39427396"),
+  name: 'Haritha',
+  age: 19,
+  gender: 'F'
+}
+{
+  _id: ObjectId("6492726ed6a9945d39427397"),
+  name: 'Bharath',
+  age: 27,
+  gender: 'M'
+}
+{
+  _id: ObjectId("649272b0d6a9945d39427399"),
+  name: 'Dev',
+  age: 19,
+  gender: 'M'
+}
+{
+  _id: ObjectId("649272cad6a9945d3942739a"),
+  name: 'Aishwarya',
+  age: 16,
+  gender: 'F'
+}
+db.cl.find().sort({age:-1});
+{
+  _id: ObjectId("6492726ed6a9945d39427397"),
+  name: 'Bharath',
+  age: 27,
+  gender: 'M'
+}
+{
+  _id: ObjectId("649271afd6a9945d39427395"),
+  name: 'Srithika',
+  age: 21,
+  gender: 'F'
+}
+{
+  _id: ObjectId("64927250d6a9945d39427396"),
+  name: 'Haritha',
+  age: 19,
+  gender: 'F'
+}
+{
+  _id: ObjectId("649272b0d6a9945d39427399"),
+  name: 'Dev',
+  age: 19,
+  gender: 'M'
+}
+{
+  _id: ObjectId("6492718dd6a9945d39427394"),
+  name: 'Karthik',
+  age: 18,
+  gender: 'M'
+}
+{
+  _id: ObjectId("649272cad6a9945d3942739a"),
+  name: 'Aishwarya',
+  age: 16,
+  gender: 'F'
+}
+{
+  _id: ObjectId("64927282d6a9945d39427398"),
+  name: 'Aarish',
+  age: 15,
+  gender: 'M'
+}
+db.cl.find().sort({age:1});
+{
+  _id: ObjectId("64927282d6a9945d39427398"),
+  name: 'Aarish',
+  age: 15,
+  gender: 'M'
+}
+{
+  _id: ObjectId("649272cad6a9945d3942739a"),
+  name: 'Aishwarya',
+  age: 16,
+  gender: 'F'
+}
+{
+  _id: ObjectId("6492718dd6a9945d39427394"),
+  name: 'Karthik',
+  age: 18,
+  gender: 'M'
+}
+{
+  _id: ObjectId("64927250d6a9945d39427396"),
+  name: 'Haritha',
+  age: 19,
+  gender: 'F'
+}
+{
+  _id: ObjectId("649272b0d6a9945d39427399"),
+  name: 'Dev',
+  age: 19,
+  gender: 'M'
+}
+{
+  _id: ObjectId("649271afd6a9945d39427395"),
+  name: 'Srithika',
+  age: 21,
+  gender: 'F'
+}
+{
+  _id: ObjectId("6492726ed6a9945d39427397"),
+  name: 'Bharath',
+  age: 27,
+  gender: 'M'
+}
+db.cl.find().sort({age:1},{name:-1},{gender:1});
+{
+  _id: ObjectId("64927282d6a9945d39427398"),
+  name: 'Aarish',
+  age: 15,
+  gender: 'M'
+}
+{
+  _id: ObjectId("649272cad6a9945d3942739a"),
+  name: 'Aishwarya',
+  age: 16,
+  gender: 'F'
+}
+{
+  _id: ObjectId("6492718dd6a9945d39427394"),
+  name: 'Karthik',
+  age: 18,
+  gender: 'M'
+}
+{
+  _id: ObjectId("64927250d6a9945d39427396"),
+  name: 'Haritha',
+  age: 19,
+  gender: 'F'
+}
+{
+  _id: ObjectId("649272b0d6a9945d39427399"),
+  name: 'Dev',
+  age: 19,
+  gender: 'M'
+}
+{
+  _id: ObjectId("649271afd6a9945d39427395"),
+  name: 'Srithika',
+  age: 21,
+  gender: 'F'
+}
+{
+  _id: ObjectId("6492726ed6a9945d39427397"),
+  name: 'Bharath',
+  age: 27,
+  gender: 'M'
+}
+db.cl.find().sort({name:-1},{gender:1});
+{
+  _id: ObjectId("649271afd6a9945d39427395"),
+  name: 'Srithika',
+  age: 21,
+  gender: 'F'
+}
+{
+  _id: ObjectId("6492718dd6a9945d39427394"),
+  name: 'Karthik',
+  age: 18,
+  gender: 'M'
+}
+{
+  _id: ObjectId("64927250d6a9945d39427396"),
+  name: 'Haritha',
+  age: 19,
+  gender: 'F'
+}
+{
+  _id: ObjectId("649272b0d6a9945d39427399"),
+  name: 'Dev',
+  age: 19,
+  gender: 'M'
+}
+{
+  _id: ObjectId("6492726ed6a9945d39427397"),
+  name: 'Bharath',
+  age: 27,
+  gender: 'M'
+}
+{
+  _id: ObjectId("649272cad6a9945d3942739a"),
+  name: 'Aishwarya',
+  age: 16,
+  gender: 'F'
+}
+{
+  _id: ObjectId("64927282d6a9945d39427398"),
+  name: 'Aarish',
+  age: 15,
+  gender: 'M'
+}
+db.cl.find().sort({gender:1});
+{
+  _id: ObjectId("649271afd6a9945d39427395"),
+  name: 'Srithika',
+  age: 21,
+  gender: 'F'
+}
+{
+  _id: ObjectId("64927250d6a9945d39427396"),
+  name: 'Haritha',
+  age: 19,
+  gender: 'F'
+}
+{
+  _id: ObjectId("649272cad6a9945d3942739a"),
+  name: 'Aishwarya',
+  age: 16,
+  gender: 'F'
+}
+{
+  _id: ObjectId("6492718dd6a9945d39427394"),
+  name: 'Karthik',
+  age: 18,
+  gender: 'M'
+}
+{
+  _id: ObjectId("6492726ed6a9945d39427397"),
+  name: 'Bharath',
+  age: 27,
+  gender: 'M'
+}
+{
+  _id: ObjectId("64927282d6a9945d39427398"),
+  name: 'Aarish',
+  age: 15,
+  gender: 'M'
+}
+{
+  _id: ObjectId("649272b0d6a9945d39427399"),
+  name: 'Dev',
+  age: 19,
+  gender: 'M'
+}
